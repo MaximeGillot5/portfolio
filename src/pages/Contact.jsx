@@ -1,5 +1,6 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import Shapes from "../models/Shapes";
 
 const Contact = () => {
   const formRef = useRef(null);
@@ -41,10 +42,22 @@ const Contact = () => {
   };
   const handleBlur = () => {};
   const handleFocus = () => {};
+
+  useEffect(() => {
+    const handleResize = () => {
+      location.reload();
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <section className="relative flex lg:flex-row flex-col max-container">
-      <div className="flex-1 min-w-[50%] flex flex-col">
-        <h1 className="head-text">Get in Touch</h1>
+      <div className="flex-1 min-w-[60%] flex flex-col">
+        <h1 className="head-text">Contactez-moi !</h1>
 
         <form
           className="w-full flex flex-col gap-7 mt-14"
@@ -56,7 +69,7 @@ const Contact = () => {
               type="text"
               name="name"
               className="input"
-              placeholder="John"
+              placeholder="Jeanne"
               required
               value={form.name}
               onChange={handleChange}
@@ -70,7 +83,7 @@ const Contact = () => {
               type="email"
               name="email"
               className="input"
-              placeholder="john@gmail.com"
+              placeholder="jeanne@gmail.com"
               required
               value={form.email}
               onChange={handleChange}
@@ -79,12 +92,12 @@ const Contact = () => {
             />
           </label>
           <label className="text-black-500 font-semibold">
-            Your Message
+            Votre Message
             <textarea
               name="message"
               rows={4}
               className="textarea"
-              placeholder="Let me know how i can help you"
+              placeholder="Parlez moi de votre projet !"
               required
               value={form.message}
               onChange={handleChange}
@@ -99,9 +112,12 @@ const Contact = () => {
             onFocus={handleFocus}
             onBlur={handleBlur}
           >
-            {isLoading ? "Sending..." : "Send Message"}
+            {isLoading ? "Envoi en cours..." : "Envoyer"}
           </button>
         </form>
+      </div>
+      <div className="lg:ml-32 lg:mt-44  lg:w-1/2 w-full lg:h-auto md:h-[550px] h-[350px] ">
+        <Shapes />
       </div>
     </section>
   );

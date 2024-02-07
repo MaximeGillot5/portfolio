@@ -25,6 +25,66 @@ no-max-container {
   overflow: hidden;
 }
 
+.slide-in {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #0f0f0f;
+  transform-origin: bottom;
+  z-index: 9998;
+}
+
+.slide-out {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #0f0f0f;
+  transform-origin: top;
+  z-index: 9998;
+}
+
+.page-name {
+  z-index: 9999;
+}
+
+.preloader {
+  height: 100vh;
+  width: 100%;
+  background: black;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 55;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  overflow-y: hidden;
+}
+
+.preloader .texts-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  width: 280px;
+  font-size: 15px;
+  font-weight: 800;
+  overflow: hidden;
+  color: white;
+  overflow: hidden;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
 @layer utilities {
   .max-container {
     @apply max-w-5xl mx-auto sm:p-16 pb-12 !pt-[126px] px-8 min-h-[calc(100vh-80px)];
@@ -34,12 +94,21 @@ no-max-container {
     @apply sm:text-5xl text-3xl font-semibold sm:leading-snug font-poppins;
   }
 
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
   .subhead-text {
     @apply font-semibold sm:text-3xl text-xl relative font-poppins;
   }
 
   .blue-gradient_text {
-    @apply bg-gradient-to-r from-[#00c6ff] to-[#0072ff] bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-[#ad5389] to-[#3c1053] bg-clip-text text-transparent;
   }
 
   .input {
@@ -51,7 +120,15 @@ no-max-container {
   }
 
   .btn {
-    @apply text-white bg-gradient-to-r from-[#00c6ff] to-[#0072ff] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center;
+    @apply text-white bg-gradient-to-r from-[#ad5389] to-[#3c1053] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center;
+  }
+
+  .project-gradient_text {
+    @apply bg-gradient-to-r from-[#757f9a] to-[#d7dde8] bg-clip-text text-transparent;
+  }
+
+  .base-gradient_text {
+    @apply bg-gradient-to-r from-[#5d4157] to-[#a8caba] bg-clip-text text-transparent;
   }
 
   .header {
@@ -171,12 +248,12 @@ no-max-container {
 
 /* Neo Brutalism */
 .neo-brutalism-blue {
-  background: #2b77e7;
+  background: #ce2be7;
   position: relative;
-  border-radius: 10px;
-  border: #2b77e7;
-  box-shadow: 0.6vmin 0.6vmin #336cc1, 1vmin 1vmin #0092db, 1vmin 1vmin #0092db,
-    0.65vmin 1vmin #0092db, 1vmin 0.65vmin #0092db;
+  border-radius: 60px;
+  border: #c52be7;
+  box-shadow: 0.6vmin 0.6vmin #740e99, 1vmin 1vmin #5a1c64, 1vmin 1vmin #6a4e6e,
+    0.65vmin 1vmin #55365d, 1vmin 0.65vmin #1f121e;
 }
 
 .neo-brutalism-white {

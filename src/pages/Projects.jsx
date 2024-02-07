@@ -7,6 +7,7 @@ import Img1 from "../assets/images/portfolio6.png";
 import Img2 from "../assets/images/portfolioblack.png";
 import Img3 from "../assets/images/portfolio5.png";
 import CTA from "../components/CTA";
+import transition from "../transition";
 
 const Projects = () => {
   return (
@@ -21,7 +22,7 @@ const Projects = () => {
         >
           <div className="flex-1 flex flex-col gap-y-12 mb-10 lg:mb-0">
             <div>
-              <h2 className="head-text">Mes projets</h2>
+              <h2 className="head-text base-gradient_text">Mes projets</h2>
               <p className="mt-5 flex flex-col gap-3 text-slate-500 mb-10">
                 Voici une sélection de mes derniers projets, vous pouvez bien
                 évidemment retrouver la totalité de mon travail sur mon Github
@@ -47,7 +48,7 @@ const Projects = () => {
                 </span>
               </div>
               <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50 text-white">
-                <span className="text-3xl blue-gradient_text">TROX</span>
+                <span className="text-3xl project-gradient_text">TROX</span>
               </div>
             </div>
           </div>
@@ -66,7 +67,7 @@ const Projects = () => {
                 </span>
               </div>
               <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50 text-white">
-                <span className="text-3xl blue-gradient_text">SPORTNER</span>
+                <span className="text-3xl project-gradient_text">SPORTNER</span>
               </div>
             </div>
             <div className="group relative overflow-hidden border-2 border-grey rounded-xl">
@@ -83,7 +84,7 @@ const Projects = () => {
                 </span>
               </div>
               <div className="absolute -bottom-full left-12  group-hover:bottom-14 transition-all duration-700 z-50 text-white">
-                <span className="text-3xl blue-gradient_text">
+                <span className="text-3xl project-gradient_text">
                   Portfolio 2023
                 </span>
               </div>
@@ -99,4 +100,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default transition(Projects, "Projets");

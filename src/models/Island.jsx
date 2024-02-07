@@ -155,18 +155,20 @@ const Island = ({ isRotating, setIsRotating, setCurrentStage, ...props }) => {
       // Set the current stage based on the island's orientation
       switch (true) {
         // Ajoutez une nouvelle condition pour l'étape 1
-        case normalizedRotation >= 6.1 && normalizedRotation <= 6.6:
+        case normalizedRotation >= 6.0 && normalizedRotation <= 6.8:
           setCurrentStage(1);
           break;
         case normalizedRotation >= 5.45 && normalizedRotation <= 5.85:
           setCurrentStage(4);
           break;
-        case normalizedRotation >= 0.85 && normalizedRotation <= 1.3:
+        case normalizedRotation >= 3.85 && normalizedRotation <= 4.3:
           setCurrentStage(3);
           break;
         case normalizedRotation >= 2.4 && normalizedRotation <= 2.6:
           setCurrentStage(2);
           break;
+        default:
+          setCurrentStage(null);
       }
     }
   });
@@ -1375,7 +1377,7 @@ const Island = ({ isRotating, setIsRotating, setCurrentStage, ...props }) => {
                   <group
                     name="skybox_GEO"
                     position={[0.218, 0.315, -3.777]}
-                    scale={20.78}
+                    scale={30.78}
                   >
                     <mesh
                       name="skybox_GEO_sky_MAT_0"

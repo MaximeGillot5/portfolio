@@ -4,25 +4,28 @@ import {
     contact,
     css,
     estate,
-    express,
     git,
     github,
+    gsap,
     html,
     javascript,
     linkedin,
     mongodb,
     motion,
-    mui,
     nextjs,
     nodejs,
+    postgresql,
     pricewise,
+    rails,
     react,
     redux,
+    ruby,
     sass,
     snapgram,
     summiz,
     tailwindcss,
     threads,
+    threejs,
     typescript
 } from "../assets/icons";
 
@@ -33,11 +36,6 @@ export const skills = [
         type: "Frontend",
     },
     {
-        imageUrl: express,
-        name: "Express",
-        type: "Backend",
-    },
-    {
         imageUrl: git,
         name: "Git",
         type: "Version Control",
@@ -46,6 +44,11 @@ export const skills = [
         imageUrl: github,
         name: "GitHub",
         type: "Version Control",
+    },
+    {
+        imageUrl: gsap,
+        name: "GSAP",
+        type: "Frontend",
     },
     {
         imageUrl: html,
@@ -68,11 +71,6 @@ export const skills = [
         type: "Animation",
     },
     {
-        imageUrl: mui,
-        name: "Material-UI",
-        type: "Frontend",
-    },
-    {
         imageUrl: nextjs,
         name: "Next.js",
         type: "Frontend",
@@ -80,6 +78,26 @@ export const skills = [
     {
         imageUrl: nodejs,
         name: "Node.js",
+        type: "Backend",
+    },
+    {
+        imageUrl: ruby,
+        name: "Ruby",
+        type: "Backend",
+    },
+    {
+        imageUrl: threejs,
+        name: "Threejs",
+        type: "Frontend",
+    },
+    {
+        imageUrl: postgresql,
+        name: "Postgresql",
+        type: "Backend",
+    },
+    {
+        imageUrl: rails,
+        name: "Rails",
         type: "Backend",
     },
     {

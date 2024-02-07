@@ -5,6 +5,7 @@ import {
 } from "react-vertical-timeline-component";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import transition from "../transition";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -101,7 +102,7 @@ const About = () => {
         </div>
 
         <div className="mt-16 flex gap-40 ml-12 " ref={techRowRef2}>
-          {skills.map((skill, index) => (
+          {skills.reverse().map((skill, index) => (
             <div key={index} className="block-container w-20 h-20 skill-item">
               <div className="btn-back rounded-xl" />
               <div className="btn-front rounded-xl flex justify-center items-center">
@@ -116,7 +117,7 @@ const About = () => {
         </div>
       </div>
       <div className="max-container">
-        <div className="py-16">
+        <div className="pb-16">
           <h3 className="subhead-text">Historique d'apprentissage</h3>
           <div className="mt-5 flex flex-col gap-3 text-slate-500 ">
             <p>
@@ -185,4 +186,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default transition(About, "About");
