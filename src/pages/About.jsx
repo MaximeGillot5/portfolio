@@ -6,16 +6,12 @@ import {
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import transition from "../transition";
-
 gsap.registerPlugin(ScrollTrigger);
-
 import "react-vertical-timeline-component/style.min.css";
-
 import { skills, experiences } from "../constants";
 import CTA from "../components/CTA";
 
 const About = () => {
-  const techRowRef = useRef(null);
   const techRowRef1 = useRef(null);
   const techRowRef2 = useRef(null);
 
@@ -68,7 +64,7 @@ const About = () => {
   }, []);
   return (
     <section>
-      <div className="max-w-5xl mx-auto sm:p-16 pb-12 !pt-[126px] px-8 min-h-[calc(50vh-80px)]">
+      <div className="about-container">
         <h1 className="head-text">
           Bonjour, je suis{" "}
           <span className="blue-gradient_text font-semibold drop-shadow">
@@ -76,11 +72,9 @@ const About = () => {
           </span>
         </h1>
 
-        <div className="mt-5 flex flex-col gap-3 text-slate-500 ">
-          <p>
-            Développeur Web Fullstack de 26 ans, adepte d'intégration 3D et prêt
-            à relever de nouveaux défis au sein d'une équipe de passionnés.
-          </p>
+        <div className="text-about-me">
+          Développeur Web Fullstack de 26 ans, adepte d'intégration 3D et prêt à
+          relever de nouveaux défis au sein d'une équipe de passionnés.
         </div>
       </div>
 

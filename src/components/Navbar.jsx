@@ -24,7 +24,7 @@ const Navbar = () => {
             isActive ? "blue-gradient_text" : "text-black"
           }
         >
-          Projects
+          Projets
         </NavLink>
       </nav>
     </header>
