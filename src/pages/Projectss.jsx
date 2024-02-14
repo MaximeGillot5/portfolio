@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Picture1 from "../assets/images/projectsimages/phonebg.png";
 
-import Picture2 from "../assets/images/projectsimages/2.jpg";
+import Picture2 from "../assets/images/projectsimages/sportnernobg.png";
 import Picture5 from "../assets/images/projectsimages/sportnerlogo.png";
 
 import Picture3 from "../assets/images/projectsimages/3.jpg";
@@ -14,7 +14,6 @@ import CTA from "../components/CTA";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const word = "with gsap";
 const word2 = "octobre 2022";
 
 const Projectss = () => {
@@ -103,6 +102,7 @@ const Projectss = () => {
           })}
         </div>
       </div>
+
       <hr className="border-slate-200" />
       <CTA />
     </div>

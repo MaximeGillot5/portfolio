@@ -37,96 +37,108 @@ no-max-container {
 }
 
 /* Projectss */
-.container-project {
-  margin-top: 10vh;
+.paragraph-ws {
+  display: flex;
 
-  min-height: 280vh;
+  font-size: 60px;
 
-  .body-project {
-    margin-left: 10vw;
+  line-height: 1;
 
-    .h-project {
-      margin: 0px;
+  padding: 40px;
 
-      margin-top: 10px;
+  max-width: 1280px;
 
-      font-size: 5vw;
+  color: white;
 
-      line-height: 5vw;
-
-      text-transform: uppercase;
-    }
-
-    .p-project {
-      color: white;
-
-      margin: 0px;
-
-      margin-top: 10px;
-
-      font-size: 3vw;
-
-      text-transform: uppercase;
-
-      span {
-        position: relative;
-      }
-    }
-  }
-
-  .images-project {
-    display: flex;
-
-    width: 100%;
-
-    justify-content: center;
-
-    position: relative;
-
-    margin-top: 5vh;
-
-    .imageContainer {
-      position: absolute;
-
-      img {
-        object-fit: cover;
-        border-radius: 30px;
-      }
-
-      &:nth-of-type(1) {
-        height: 60vh;
-
-        width: 50vh;
-
-        z-index: 1;
-      }
-
-      &:nth-of-type(2) {
-        left: 36vw;
-
-        top: 15vh;
-
-        height: 30vh;
-
-        width: 25vh;
-
-        z-index: 2;
-      }
-
-      &:nth-of-type(3) {
-        left: 4.5vw;
-
-        top: 40vh;
-
-        height: 75vh;
-
-        width: 50vh;
-
-        z-index: 3;
-      }
-    }
-  }
+  flex-wrap: wrap;
 }
+
+.word-ws {
+  position: relative;
+
+  margin-right: 12px;
+
+  margin-top: 12px;
+}
+
+.shadow {
+  position: absolute;
+
+  opacity: 20%;
+}
+
+.mega-container {
+  height: 800vh;
+}
+
+.container-f {
+  height: 200vh;
+
+  position: relative;
+}
+
+.container-g {
+  height: 300vh;
+  position: relative;
+  margin-bottom: -220vh;
+}
+
+.stickyf {
+  position: sticky;
+
+  overflow: hidden;
+
+  top: 0;
+
+  height: 100vh;
+
+  margin-bottom: -40vh;
+}
+
+.elf {
+  align-items: center;
+
+  justify-content: center;
+
+  color: white;
+}
+
+.no-border {
+  margin-right: 0px !important; /* ou border: 0; */
+}
+
+.imageContainerf {
+  position: relative;
+
+  width: 25vw;
+
+  height: 25vh;
+}
+
+.imageContainerg {
+  position: relative;
+  width: 50vw;
+  height: 50vh;
+  padding: 40px;
+}
+
+.divContainerf {
+  position: relative;
+}
+img {
+  object-fit: cover;
+}
+
+.bgblackproject {
+  background: rgb(24, 24, 24);
+}
+
+.framer {
+  padding-top: 85vh;
+  padding-bottom: 85vh;
+  position: relative;
+}
+
 /* END */
 
 .slide-out {

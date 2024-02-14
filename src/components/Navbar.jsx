@@ -19,7 +19,7 @@ const Navbar = () => {
           About
         </NavLink>
         <NavLink
-          to="/projects"
+          to="/projectsf"
           className={({ isActive }) =>
             isActive ? "blue-gradient_text" : "text-black"
           }

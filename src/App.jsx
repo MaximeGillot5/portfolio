@@ -1,9 +1,10 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import { Home, About, Projects, Contact, Projectss } from "./pages";
+import { Home, About, Contact } from "./pages";
 import Preloader from "./components/Preloader";
 import { AnimatePresence } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import Projectsf from "./pages/Projectsf";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -32,9 +33,8 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/projectss" element={<Projects />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/projects" element={<Projectss />} />
+            <Route path="/projectsf" element={<Projectsf />} />
           </Routes>
         </AnimatePresence>
       </Router>
