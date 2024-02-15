@@ -1,12 +1,13 @@
 import React, { useEffect, useRef } from "react";
 import transition from "../transition";
 import { useScroll, useTransform, motion } from "framer-motion";
-import Picture1 from "../assets/images/projectsimages/sportnerquality.png";
 import Lenis from "@studio-freight/lenis";
-import Picture2 from "../assets/images/projectsimages/portfolio-img-0.png";
 
 import Word from "../components/Word";
 import Parallax from "../components/Parallax";
+import ScrollToTop from "../components/ScrollToTop";
+import { FaGithub } from "react-icons/fa";
+import ScrollToBottomButton from "../components/ScrollToBottomButton";
 
 const Projectsf = () => {
   useEffect(() => {
@@ -43,7 +44,7 @@ const Projectsf = () => {
 
   const scale2 = useTransform(scrollYProgress2, [0, 0.2], [1, 4]);
 
-  const scale3 = useTransform(scrollYProgress3, [0, 0.2], [1, 4]);
+  const scale3 = useTransform(scrollYProgress3, [1, 1], [1, 2]);
 
   const xTranslation2 = useTransform(scrollYProgress2, [0, 1], [0, 10500]); // Par exemple, déplacez de 100 pixels vers la droite lorsque vous faites défiler à la fin
 
@@ -54,8 +55,12 @@ const Projectsf = () => {
           <div className="stickyf">
             <motion.div style={{ scale: scale1 }} className="">
               <div className="elf mt-72">
-                <Parallax baseVelocity={-5}>SPORTNER SPORTNER</Parallax>
-                <Parallax baseVelocity={5}>SPORTNER SPORTNER</Parallax>
+                <Parallax baseVelocity={-5}>
+                  SPORT<span className="orange">NER </span>
+                </Parallax>
+                <Parallax baseVelocity={5}>
+                  SPORT<span className="orange">NER </span>
+                </Parallax>
               </div>
             </motion.div>
           </div>
@@ -78,12 +83,26 @@ const Projectsf = () => {
           <div className="stickyf">
             <motion.div style={{ scale: scale3 }} className="">
               <div className="elf mt-72">
-                <Parallax baseVelocity={-5}>TROX TROX TROX TROX</Parallax>
-                <Parallax baseVelocity={5}>TROX TROX TROX TROX</Parallax>
+                <Parallax baseVelocity={-2}>GITHUB GITHUB</Parallax>
+                <Parallax baseVelocity={2}>LIEN DU PROJET</Parallax>
               </div>
             </motion.div>
           </div>
         </div>
+        <div className="max-container">
+          <div className="icon-github">
+            <a
+              href="https://github.com/MaximeGillot5/sportner"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="icon-github"
+            >
+              <FaGithub className="icontest" />
+            </a>
+          </div>
+        </div>
+        <ScrollToTop />
+        <ScrollToBottomButton />
       </div>
     </>
   );

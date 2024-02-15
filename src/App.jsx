@@ -4,7 +4,7 @@ import { Home, About, Contact } from "./pages";
 import Preloader from "./components/Preloader";
 import { AnimatePresence } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import Projectsf from "./pages/Projectsf";
+import Projects from "./pages/Projectsf";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -34,7 +34,7 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/projectsf" element={<Projectsf />} />
+            <Route path="/projects" element={<Projects />} />
           </Routes>
         </AnimatePresence>
       </Router>

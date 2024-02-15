@@ -1,6 +1,8 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const Navbar = () => {
+  const location = useLocation();
+
   return (
     <header className="header">
       <NavLink
@@ -12,16 +14,20 @@ const Navbar = () => {
       <nav className="flex text-lg gap-7 font-medium">
         <NavLink
           to="/about"
-          className={({ isActive }) =>
-            isActive ? "blue-gradient_text" : "text-black"
+          className={
+            location.pathname === "/" ||
+            location.pathname === "/about" ||
+            location.pathname === "/contact"
+              ? "text-black"
+              : "text-white"
           }
         >
           About
         </NavLink>
         <NavLink
-          to="/projectsf"
-          className={({ isActive }) =>
-            isActive ? "blue-gradient_text" : "text-black"
+          to="/projects"
+          className={
+            location.pathname === "/projects" ? "orange" : "text-black"
           }
         >
           Projets

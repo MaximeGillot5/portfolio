@@ -19,8 +19,11 @@ import threejs from './threejs.svg'
 import rails from './rails.svg'
 import postgresql from './postgresql.svg'
 import gsap from './gsap.svg'
+import logowebsite from './logowebsite.svg'
+
 
 export {
+    logowebsite,
     css,
     git,
     github,

@@ -10,7 +10,6 @@ import {
   useAnimationFrame,
 } from "framer-motion";
 import { wrap } from "@motionone/utils";
-import "../styles/Parallax.css";
 
 const Parallax = ({ children, baseVelocity = 100 }) => {
   const baseX = useMotionValue(0);
@@ -44,10 +43,14 @@ const Parallax = ({ children, baseVelocity = 100 }) => {
   return (
     <div className="parallax">
       <motion.div className="scroller" style={{ x }}>
-        <span>{children} </span>
-        <span>{children} </span>
-        <span>{children} </span>
-        <span>{children} </span>
+        <span className="spanp">{children} </span>
+        <span className="spanp">{children} </span>
+        <span className="spanp">{children} </span>
+        <span className="spanp">{children} </span>
+        <span className="spanp">{children} </span>
+        <span className="spanp">{children} </span>
+        <span className="spanp">{children} </span>
+        <span className="spanp">{children} </span>
       </motion.div>
     </div>
   );

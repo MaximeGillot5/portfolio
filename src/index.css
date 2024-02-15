@@ -9,6 +9,17 @@
   --green-rgb: 125 161 35;
 }
 
+::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: white;
+  -webkit-border-radius: 1ex;
+}
+
 body {
   font-family: "Work Sans", sans-serif;
 }
@@ -37,6 +48,76 @@ no-max-container {
 }
 
 /* Projectss */
+
+.parallax {
+  overflow: hidden;
+  letter-spacing: -2px;
+  line-height: 0.8;
+  margin: 0;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.parallax .scroller {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 64px;
+  display: flex;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.spanp {
+  display: block;
+  margin-right: 30px;
+}
+
+.icon-github {
+  color: white;
+  display: flex;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  margin-top: 150px;
+}
+
+.icontest {
+  height: 250px;
+  width: 250px;
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px; /* Ajustez selon vos besoins */
+  right: 20px; /* Ajustez selon vos besoins */
+  z-index: 999; /* Assurez-vous que le bouton reste au-dessus du contenu */
+  transition: opacity 0.3s ease;
+  opacity: 0; /* Le bouton est invisible par défaut */
+}
+
+.scroll-to-top.show {
+  opacity: 1;
+}
+
+.scroll-to-top button {
+  background-color: orangered;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 11px;
+  cursor: pointer;
+}
+
+.scroll-to-top button:hover {
+  background-color: black;
+  transition: 0.5s ease-in-out;
+}
+
+.orange {
+  color: orangered;
+}
+
 .paragraph-ws {
   display: flex;
 
@@ -51,6 +132,12 @@ no-max-container {
   color: white;
 
   flex-wrap: wrap;
+
+  @media screen and (max-width: 800px) {
+    padding: 5px;
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
 }
 
 .word-ws {
@@ -68,7 +155,10 @@ no-max-container {
 }
 
 .mega-container {
-  height: 800vh;
+  height: 670vh;
+  @media screen and (max-width: 800px) {
+    height: 570vh;
+  }
 }
 
 .container-f {
@@ -81,6 +171,9 @@ no-max-container {
   height: 300vh;
   position: relative;
   margin-bottom: -220vh;
+  @media screen and (max-width: 800px) {
+    margin-bottom: -300vh;
+  }
 }
 
 .stickyf {
@@ -195,6 +288,10 @@ img {
     @apply max-w-5xl mx-auto sm:p-16 pb-12 !pt-[126px] px-8 min-h-[calc(100vh-80px)];
   }
 
+  .max-containerp {
+    @apply max-w-5xl mx-auto sm:p-16 pb-12 !pt-[126px] px-8 min-h-[calc(100vh-80px)];
+  }
+
   .head-text {
     @apply sm:text-5xl text-3xl font-semibold sm:leading-snug font-poppins;
   }
@@ -232,7 +329,7 @@ img {
     @apply block p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:ring-blue-500 focus:border-blue-500 mt-2.5 font-normal shadow-card;
   }
 
-  .btn {
+  .btn-p {
     @apply text-white bg-gradient-to-r from-[#ad5389] to-[#3c1053] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center;
   }
 
