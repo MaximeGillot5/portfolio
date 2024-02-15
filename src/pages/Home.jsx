@@ -31,11 +31,11 @@ const Home = () => {
     adjustIslandForScreenSize();
 
   return (
-    <div className="overflow-hidden">
+    <div>
       <section className="w-full h-screen relative">
         <div
           ref={floatingDivRef}
-          className="absolute top-28 left-0 right-0 z-10 flex items-center justify-center"
+          className="absolute top-28 left-0 right-0 z-10 flex items-center justify-center overflow-hidden"
         >
           {currentStage && <HomeInfo currentStage={currentStage} />}
         </div>
