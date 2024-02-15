@@ -31,7 +31,7 @@ const Home = () => {
     adjustIslandForScreenSize();
 
   return (
-    <div>
+    <div className="overflow-hidden">
       <section className="w-full h-screen relative">
         <div
           ref={floatingDivRef}
