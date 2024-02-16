@@ -1,0 +1,14 @@
+# Déclaration du sitemap
+Sitemap: https://www.example.com/sitemap.xml
+
+# Règles par défaut
+User-agent: *
+Disallow: /admin/
+Disallow: /login.html
+
+# Règles spécifiques pour certains robots
+User-agent: Googlebot
+Disallow: /private/
+
+User-agent: Bingbot
+Disallow: /admin/

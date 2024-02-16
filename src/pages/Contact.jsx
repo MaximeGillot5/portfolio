@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import Shapes from "../models/Shapes";
+import transition from "../transition";
 
 const Contact = () => {
   const formRef = useRef(null);
@@ -109,4 +109,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default transition(Contact, "Contact");
