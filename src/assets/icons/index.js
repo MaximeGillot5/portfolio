@@ -12,7 +12,6 @@ import redux from './redux.svg'
 import sass from './sass.svg'
 import tailwindcss from './tailwindcss.svg'
 import typescript from './typescript.svg'
-import arrow from './arrow.svg'
 import contact from './contact.svg'
 import ruby from './rubyicon.svg'
 import threejs from './threejs.svg'
@@ -42,7 +41,6 @@ export {
     sass,
     tailwindcss,
     typescript,
-    arrow,
     contact,
     ruby
 }

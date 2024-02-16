@@ -1,6 +1,5 @@
 import { Suspense, useRef, useState } from "react";
 import { Canvas } from "@react-three/fiber";
-import Loader from "../components/Loader";
 import Island from "../models/Island";
 import HomeInfo from "../components/HomeInfo";
 import transition from "../transition";
@@ -46,8 +45,6 @@ const Home = () => {
           camera={{ near: 0.1, far: 1000 }}
         >
           <Suspense>
-            <directionalLight position={[6, 2, 2]} intensity={1} />
-            <ambientLight intensity={0.6} color="#04081a" />
             <Island
               isRotating={isRotating}
               setIsRotating={setIsRotating}
