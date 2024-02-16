@@ -43,17 +43,6 @@ const Contact = () => {
   const handleBlur = () => {};
   const handleFocus = () => {};
 
-  useEffect(() => {
-    const handleResize = () => {
-      location.reload();
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
   return (
     <section className="relative flex lg:flex-row flex-col max-container">
       <div className="flex-1 min-w-[60%] flex flex-col">
@@ -107,7 +96,7 @@ const Contact = () => {
           </label>
           <button
             type="submit"
-            className="btn"
+            className="btn-p"
             disabled={isLoading}
             onFocus={handleFocus}
             onBlur={handleBlur}
@@ -115,9 +104,6 @@ const Contact = () => {
             {isLoading ? "Envoi en cours..." : "Envoyer"}
           </button>
         </form>
-      </div>
-      <div className="lg:ml-32 lg:mt-44  lg:w-1/2 w-full lg:h-auto md:h-[550px] h-[350px] ">
-        <Shapes />
       </div>
     </section>
   );

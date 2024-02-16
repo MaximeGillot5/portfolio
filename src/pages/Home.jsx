@@ -32,7 +32,7 @@ const Home = () => {
 
   return (
     <div>
-      <section className="w-full h-screen relative max-h-[100vh]">
+      <section className="w-full h-screen relative]">
         <div
           ref={floatingDivRef}
           className="absolute top-28 left-0 right-0 z-10 flex items-center justify-center"
