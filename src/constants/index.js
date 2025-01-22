@@ -121,7 +121,7 @@ export const skills = [
 
 export const experiences = [
     {
-        title: "Apprentissage HTML, CSS et Javascript en autoditacte",
+        title: "Apprentissage HTML, CSS et Javascript en autodidacte",
         company_name: "À domicile",
         icon: html,
         iconBg: "#fbc3bc",
